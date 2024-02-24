@@ -43,7 +43,6 @@ button:hover {
 main {
   height: 80vh;
   width: 400px;
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   gap: 20px;

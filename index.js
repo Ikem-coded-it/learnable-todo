@@ -87,7 +87,7 @@ function createTodo(e) {
   store.add(todo);
   ui.addNewTodoCard(todo)
 
-  e.target.body.value
+  e.target.body.value = ""
   ui.closeFormModal()
 }
 
