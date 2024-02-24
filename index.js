@@ -9,12 +9,12 @@ class UIControls {
     formModal.classList.remove("show")
   }
 
-  createTodoTemplate(id, body, checked) {
+  createTodoTemplate(id, body) {
     const template = document.createElement('div');
     template.classList.add("todo");
     template.setAttribute("data-id", `${id}`)
     template.innerHTML = `<div>
-      <input type="checkbox"/>
+      <input type="checkbox" />
       <p class="todo-text">${body}</p>
     </div>
   
@@ -49,7 +49,7 @@ class Todo {
     this.check = true
   }
 
-  unCheck() {
+  uncheck() {
     this.check = false
   }
 }
