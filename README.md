@@ -2,6 +2,8 @@
 
 Todo list app for learnable
 
+[Demo](https://ikem-coded-it.github.io/learnable-todo/)
+
 # Instructions to run locally
 
 - clone the repo
