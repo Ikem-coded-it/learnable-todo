@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --light-bg: #1f2937;
+  --dark-bg: #030712;
+  --white: #f9fafb;
+  --blue: #1d4ed8;
+}
+
+body {
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: var(--dark-bg);
+}
+
+h1, h2, p {
+  color: var(--white);
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+main {
+  height: 80vh;
+  width: 400px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.todos-container, .completed-todos-container {
+  height: fit-content;
+  width: 100%;
+  padding: 10px;
+}
+
+.todo {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: var(--light-bg);
+  padding: 10px;
+  margin-bottom: 7px;
+}
+
+.todo > div {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+i {
+  height: 20px;
+  width: 20px;
+  color: var(--white)
+}
+
+input[type = checkbox] {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.todo-text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.edit-btn, .delete-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.form-modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #030712ce;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.todo-form {
+  display: flex;
+  height: 50px;
+  width: fit-content;
+  justify-content: flex-start;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.todo-form > input {
+  height: 100%;
+  width: 320px;
+  background-color: var(--light-bg);
+  border: none;
+  padding: 10px 10px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  border: none;
+}
+
+.add-todo-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: none;
+}
+
+@media (max-width: 780px) {
+  main {
+    height: 100vh;
+    width: 100%;
+  }
+}
